@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+  </head>
+  <body class="body">
+    <style>
+      .password {
+        width: 144px;
+        height: 40px;
+        border: 2px solid #aaa;
+        border-radius: 6px;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: 0.3s;
+        top: 100px;
+      }
+
+      .password:focus {
+        border-color: dodgerblue;
+        box-shadow: 0 0 8px 0 dodgerblue;
+      }
+    </style>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <center>
+      <form action="/" method="POST">
+        <span
+          ><input
+            class="password"
+            autocomplete="off"
+            type="text"
+            name="id"
+            placeholder="비밀번호"
+        /></span>
+      </form>
+    </center>
+  </body>
+</html>

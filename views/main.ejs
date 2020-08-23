@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글</title>
+  </head>
+  <body class="body">
+    <style>
+      .home {
+        text-decoration: none;
+        color: #2e2e2e;
+      }
+
+      .create {
+        float: right;
+        background-color: #87ceeb;
+        padding: 15px 30px;
+        margin: 2px;
+        border: none;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        border-radius: 10px;
+        font-weight: bold;
+      }
+
+      .create:hover {
+        background-color: #4169e1;
+        color: white;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    </style>
+    <center>
+      <h1><a class="home" href="/main">홈페이지</a></h1>
+    </center>
+    <p>
+      <input class="create" type="button" value="로그아웃" onclick="logout()" />
+    </p>
+    <p>
+      <input class="create" type="button" value="글 생성" onclick="create()" />
+    </p>
+
+    <script>
+      function logout() {
+        location.href = "/";
+      }
+      function create() {
+        location.href = "/create";
+      }
+    </script>
+    <br /><br /><br /><br /><br /><br />
+    <%- description %>
+  </body>
+</html>

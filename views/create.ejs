@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 생성</title>
+</head>
+<body>
+    <style>
+        .home {
+            text-decoration: none;
+            color: #2E2E2E;
+        }
+
+        .input {
+            margin: 0px;
+            width: 1250px;
+            height: 651px;
+        }
+
+        .pay {
+            width: 1250px;
+            height: 30px;
+            border: none;
+        }
+          
+        .input {
+        border: 2px solid #aaa;
+        border-radius: 6px;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: 0.3s;
+      }
+
+      .input:focus {
+        border-color: dodgerblue;
+        box-shadow: 0 0 8px 0 dodgerblue;
+      }
+        
+    </style>
+     <style>
+        .home {
+          text-decoration: none;
+          color: #2e2e2e;
+        }
+  
+        .create {
+          float: right;
+          background-color: #87ceeb;
+          padding: 15px 30px;
+          margin: 2px;
+          border: none;
+          color: black;
+          text-align: center;
+          text-decoration: none;
+          font-size: 16px;
+          display: inline-block;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          border-radius: 10px;
+          font-weight: bold;
+        }
+  
+        .create:hover {
+          background-color: #4169e1;
+          color: white;
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      </style>
+      <center>
+        <h1><a class="home" href="/main">홈페이지</a></h1>
+        <!--홈으로 가는 버튼-->
+      </center>
+      <p>
+        <input class="create" type="button" value="로그아웃" onclick="logout()" />
+      </p>
+      <p>
+        <input class="create" type="button" value="글 생성" onclick="create()" />
+      </p>
+      <br><br><br><br><br><br>
+  
+      <script>
+        function logout() {
+          location.href = "/";
+        }
+        function create() {
+          location.href = "/create";
+        }
+      </script>
+    <form action="/create_process" method="POST">
+       <textarea class="input" name="description" placeholder="내용"></textarea>
+       <input class="pay" type="submit" value="등록">
+    </form>
+</body>
+</html>
